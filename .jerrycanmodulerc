@@ -66,7 +66,8 @@
               "type": "json",
               "crossOrigin": true,
               "credentials": true
-            }
+            },
+            "key": "multiple request can assin key to each call, then capture it in the reducer"
           }
         ],
         "request": [],

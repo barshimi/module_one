@@ -9,7 +9,78 @@
     "path": "module_one",
     "directory_path": "module_one/ModuleOne"
   },
-  "global_types": [],
-  "globalCycle": [],
-  "middlewares": []
+  "global_types": [
+    {
+      "globalName": "counter,"
+      "globalType": "number",
+      "initialState": 0
+    },
+    {
+      "globalName": "user,"
+      "globalType": "object",
+      "initialState": {}
+    },
+    {
+      "globalName": "isAuthenticated,"
+      "globalType": "bool",
+      "initialState": false
+    }
+  ],
+  "globalCycle": [
+  {
+    "actionConst": "LOGOUT_USER",
+    "actionFnName": "logout",
+    "params": [],
+    "payload": true,
+    "description": "short info about this global",
+    "initialReducers": true,
+    "reducers": [
+      { user: {} },
+      { isAuthenticated: false },
+      { accessToken: '' }
+    ]
+  },
+  {
+    "actionConst": "LOGIN_USER",
+    "actionFnName": "login",
+    "params": ["some value"],
+    "payload": true,
+    "costumeReducer": "optional",
+    "apiCall": {
+      "endPoint":[
+        {
+          "url": "http://www.example.com",
+          "headers": {"idempotency": "bla bla"},
+          "method": "get",
+          "options": {
+            "type": "json",
+            "crossOrigin": true,
+            "credentials": true
+          }
+        }
+      ],
+      "request": [
+
+      ],
+      "error": [
+
+      ],
+      "innerFunc": "foo"
+    },
+    "description": "description of action event for other developers use",
+    "initialReducers": true,
+    "reducers": [
+      {
+        "user": {
+          "payloadKey": null,
+          "payload": true
+        }
+      }
+      // counter: <some value>
+    ]
+  }
+  ],
+  "middlewares": [
+
+  ]
 }

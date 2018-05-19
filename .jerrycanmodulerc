@@ -9,7 +9,55 @@
     "path": "module_one",
     "directory_path": "module_one/ModuleOne"
   },
-  "global_types": [],
-  "globalCycle": [],
-  "middlewares": []
+  "global_types": [
+    {
+      "globalName": "counter,"
+      "globalType": "number",
+      "initialState": 0
+    }
+  ],
+  "globalCycle": [
+  {
+    actionConst: 'LOGIN_USER',
+    actionFnName: 'login',
+    params: ["some value"],
+    payload: true,
+    costumeReducer: "optional",
+    apiCall: {
+      endPoint:[
+        {
+          url: "http://www.example.com",
+          headers: {},
+          method: "get",
+          options: {
+            type:
+            crossOrigin:
+            credentials:
+          }
+        }
+      ],
+      request: [
+
+      ],
+      error: [
+
+      ],
+      innerFunc: "foo"
+    },
+    description: 'description of action event for other developers use',
+    initialReducers: true,
+    reducers: [
+      {
+        user: {
+          payloadKey: null,
+          payload: true
+        }
+      }
+      // counter: <some value>
+    ]
+  }
+  ],
+  "middlewares": [
+
+  ]
 }

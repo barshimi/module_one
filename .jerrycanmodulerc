@@ -35,9 +35,9 @@
     "description": "short info about this global",
     "initialReducers": true,
     "reducers": [
-      { user: {} },
-      { isAuthenticated: false },
-      { accessToken: '' }
+      { "user": {} },
+      { "isAuthenticated": false },
+      { "accessToken": "" }
     ]
   },
   {

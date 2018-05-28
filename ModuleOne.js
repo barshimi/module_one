@@ -1,6 +1,10 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 
-export default class ModuleOne extends React.Component {
+const actionCreator = require('../../app/main.js').default
+
+export class ModuleOne extends React.Component {
   render () {
     return (
       <div>
@@ -11,3 +15,20 @@ export default class ModuleOne extends React.Component {
     )
   }
 }
+
+const mapStateToProps = state => {
+  console.log(state)
+  return {
+
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  const actions = bindActionCreators(actionCreator, dispatch)
+  console.log(actions)
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ModuleOne)

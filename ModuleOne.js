@@ -25,9 +25,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   const actions = bindActionCreators(actionCreator, dispatch)
-  console.log(actions)
   return {
-
+    login: actions.login
   }
 }
 

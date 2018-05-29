@@ -34,6 +34,7 @@
       "payload": true,
       "description": "increment numbers",
       "initialReducers": true,
+      "costumeReducer": "specialIncrement",
       "reducers": {
         "counter": {
             "payloadKey": null,

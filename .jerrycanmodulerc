@@ -34,14 +34,12 @@
       "payload": true,
       "description": "increment numbers",
       "initialReducers": true,
-      "reducers": [
-        {
-          "counter": {
+      "reducers": {
+        "counter": {
             "payloadKey": null,
             "payload": true
           }
-        },
-      ]
+      }
     },
     {
       "actionConst": "LOGOUT_USER",
@@ -50,17 +48,11 @@
       "payload": true,
       "description": "short info about this global",
       "initialReducers": true,
-      "reducers": [
-        {
-          "user": {}
-        },
-        {
-          "isAuthenticated": false
-        },
-        {
-          "accessToken": ""
-        }
-      ]
+      "reducers": {
+        "user": {},
+        "isAuthenticated": false,
+        "accessToken": ""
+      }
     },
     {
       "actionConst": "LOGIN_USER",
@@ -92,14 +84,12 @@
       },
       "description": "description of action event for other developers use",
       "initialReducers": true,
-      "reducers": [
-        {
-          "user": {
-            "payloadKey": null,
-            "payload": true
-          }
+      "reducers": {
+        "user": {
+          "payloadKey": null,
+          "payload": true
         }
-      ]
+      }
     }
   ],
   "middlewares": [

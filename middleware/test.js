@@ -1,6 +1,6 @@
-export default function test (params, store) {
+module.exports = function test (params, store) {
   return next => action => {
-    console.log(action.type)
+    console.log('test', action.type)
     return next(action)
   }
 }

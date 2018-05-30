@@ -34,12 +34,13 @@
       "payload": true,
       "description": "increment numbers",
       "initialReducers": true,
-      "costumeReducer": "specialIncrement",
+      "customReducer": "specialIncrement",
       "reducers": {
         "counter": {
-            "payloadKey": null,
-            "payload": true
-          }
+          "payloadKey": null,
+          "payload": true
+        },
+        "user": "new user"
       }
     },
     {
@@ -62,7 +63,7 @@
         "some value"
       ],
       "payload": true,
-      "costumeReducer": "optional",
+      "customReducer": "optional",
       "apiCall": {
         "endPoint": [
           {

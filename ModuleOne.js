@@ -13,7 +13,7 @@ export class ModuleOne extends React.Component {
 
   incrementNum = () => {
     const {counter, increment} = this.props
-    console.log(counter + 2)
+    // console.log(counter + 2)
     increment(counter + 2)
   }
 
@@ -31,9 +31,9 @@ export class ModuleOne extends React.Component {
 }
 
 const mapStateToProps = state => {
-  // console.log(state)
+  console.log(state)
   return {
-    counter: state.initialReducers.counter
+    counter: state.counter
   }
 }
 

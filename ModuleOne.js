@@ -33,7 +33,7 @@ export class ModuleOne extends React.Component {
 const mapStateToProps = state => {
   // console.log(state)
   return {
-    counter: state.initialReducers.counter
+    counter: state.counter
   }
 }
 

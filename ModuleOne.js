@@ -12,9 +12,9 @@ export class ModuleOne extends React.Component {
   }
 
   incrementNum = () => {
-    const {counter, increment} = this.props
+    const {increment} = this.props
     // console.log(counter + 2)
-    increment(counter + 2)
+    increment(1)
   }
 
   render () {

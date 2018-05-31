@@ -24,9 +24,65 @@
       "globalName": "isAuthenticated",
       "globalType": "bool",
       "initialState": false
+    },
+    {
+      "globalName": "request",
+      "globalType": "bool",
+      "initialState": false
+    },
+    {
+      "globalName": "usersDetails",
+      "globalType": "array",
+      "initialState": []
     }
   ],
   "globalCycle": [
+    {
+      "actionConst": "START_CALL",
+      "actionFnName": "startCall",
+      "params": [],
+      "payload": false,
+      "description": "increment numbers",
+      "initialReducers": true,
+      "reducers": {
+        "request": true
+      }
+    },
+    {
+      "actionConst": "USERS_DETAILS",
+      "actionFnName": "getUsers",
+      "params": [],
+      "payload": true,
+      "description": "get fake users using jsonplaceholder",
+      "initialReducers": true,
+      "apiCall": {
+        "endPoint": [
+          {
+            "url": "https://jsonplaceholder.typicode.com/users",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "method": "get",
+            "options": {
+              "type": "json",
+              "crossOrigin": true,
+              "credentials": true
+            }
+          }
+        ],
+        "request": [
+          {"type": "START_CALL"}
+        ],
+        "error": [],
+        "innerFunc": "foo"
+      },
+      "reducers": {
+        "usersDetails": {
+          "payloadKey": null,
+          "payload": true
+        }
+      }
+    },
     {
       "actionConst": "INCREMENT",
       "actionFnName": "increment",

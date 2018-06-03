@@ -2,6 +2,8 @@
   "module": {
     "name": "module_one",
     "stack": "react",
+    "middleware": "middleware",
+    "reducers": "reducers",
     "type": "view"
   },
   "route": {
